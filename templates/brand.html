@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+
+{% block main %}
+<div class="muClass1" >
+    <div class="container marketing">
+      
+      <!-- Three columns of text below the carousel -->
+      
+      <div class="row"> 
+        <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; padding-top: 20px; background: linear-gradient(45deg,#ffffff, #fffbdf);">
+          <div class="row">
+           <div class="col-lg-12" style="padding-top: 20px">
+              <img class="img-circle" data-src="holder.js/240x240" alt="240x240" src="{{ brand.logo.url }}" style="width: 200px; height: 200px; display: block; margin: 0 auto;">               
+               <p style="text-align: center; font-family: Snell Roundhand, cursive;  font-size: 35px;">{{ brand.nam }}</p>
+            </div>  
+          </div>
+        <div class="row">
+          <div class="myClass7">
+              <p style="margin: 0px 15px 0px 15px; font-family:Lucida Sans Unicode; font-size: 15px; text-align: justify
+              ">{{ brand.trademark }}</p>
+              <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 75px 15px 75px;">
+              
+
+              <p style="text-align: center; font-family: Snell Roundhand, cursive;  font-size: 22px;">Провідні менеджери напрямку:</p>
+                     <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 500px 15px 500px;">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 17px; text-align: center;"> {{ brand.team_leader.position }}</p>
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center;">{{ brand.team_leader.surname }} {{ brand.team_leader.name }}</p>              
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 14px; text-align: center;">тел. {{ brand.team_leader.contacts }}</p>
+                  <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 375px 15px 375px;">
+                </div>
+              </div>
+              <div class="row" style="margin-top: 15px; text-align: center;">
+             
+                  {% if brand.worker_1%}
+                <div >
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 15px; text-align: center;">{{ brand.worker_1.position }}</p>
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 20px; text-align: center;">{{ brand.worker_1.surname }} {{ brand.worker_1.name }}</p>              
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 14px; text-align: center;">тел. {{ brand.worker_1.contacts }}</p>
+                   <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 375px 15px 375px;">
+                </div>
+                  {%endif%}
+                  {% if brand.worker_2 %}
+                <div >
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 15px; text-align: center;">{{ brand.worker_2.position }}</p>
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 20px; text-align: center;">{{ brand.worker_2.surname }} {{ brand.team_leader.name }}</p>              
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 14px; text-align: center;">тел. {{ brand.worker_2.contacts }}</p>
+                   <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 375px 15px 375px;">           
+                </div>
+                  {%endif%}
+                  {% if brand.worker_3 %}
+                <div>
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 15px; text-align: center;">{{ brand.worker_3.position }}</p>
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 20px; text-align: center;">{{ brand.worker_3.surname }} {{ brand.team_leader.name }}</p>              
+                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 14px; text-align: center;">тел. {{ brand.worker_3.contacts }}</p> 
+                    <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 375px 15px 375px;">              
+                </div>
+                  {% endif %}
+              </div>
+            
+
+          </div>          
+        </div>
+      <!-- FOOTER -->
+{% endblock %}
