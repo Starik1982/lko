@@ -1,0 +1,39 @@
+
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+
+{% block main %}
+<div class="muClass1" >
+    <div class="container marketing">
+      
+      <!-- Three columns of text below the carousel -->
+      
+      <div class="row"> 
+        <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; padding-top: 20px; background: linear-gradient(45deg,#ffffff, #fffbdf);">
+          <div class="row">
+           <div class="col-lg-12" style="padding-top: 20px">
+             <p style="color: #02845e; text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Підприємству необхідні наступні вакансії</p>
+          </div>
+            </div>  
+        <div class="row"> 
+        	       	
+          <div class="myClass7">          
+            <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center; text-align: center;"><a style="color: #02845e" href="{% url 'vacancy_kiev' %}">м. Київ, метро Видубичі</a> </p>
+            <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
+            <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center; text-align: center;"><a style="color: #02845e" href="{% url 'vacancy_nivki' %}">м. Київ, метро Нивки</a> </p>
+            <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
+            <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center; text-align: center;"><a style="color: #02845e" href="{% url 'vacancy_oblast' %}">Київська область, с. Старі Петрівці</a> </p>
+            <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
+            <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center; text-align: center;"><a style="color: #02845e" href="{% url 'vacancy_berezan' %}">Київська область, м. Березань</a> </p>
+            <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
+            <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center; text-align: center;"><a style="color: #02845e" href="{% url 'vacancy_zhitomir' %}">м. Житомир</a> </p>
+            <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
+
+               
+          </div>
+        </div>    
+            
+    </div>
+      <!-- FOOTER -->
+{% endblock %}

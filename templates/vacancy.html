@@ -13,39 +13,24 @@
         <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; padding-top: 20px; background: linear-gradient(45deg,#ffffff, #fffbdf);">
           <div class="row">
            <div class="col-lg-12" style="padding-top: 20px">
-             <p style="text-align: center;"> Наше підприємство пропонує наступні вакансії</p>
+              <p style="color: #02845e; text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Підприємству необхідні наступні вакансії</p>
             </div>  
           </div>
-        <div class="row"> 
-        	{% for vacancy in vacancys %}       	
+        <div class="row">     	
           <div class="myClass7">          
-              <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 22px; text-align: center; text-align: center;">
-              {{ vacancy.structural_unit }}</p>
-               <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 375px 15px 375px;">
+               <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
 
                <div class="row">
                 <div class="col-lg-12">
-                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 23px; text-align: center;"> {{ vacancy.name_vacancy }}</p>
-                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 17px; text-align: center;">{{ vacancy.text }}</p>
-                  <hr class="featurette-divider" style="border-color: #024e38; margin: 15px 75px 15px 75px;">             
-                  <p style="margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 11px; text-align: center;">{{ vacancy.date }}</p>
+                  <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 23px; text-align: center;"> {{ vacancy.name_vacancy }}</p>
+                  <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 17px; text-align: center;">{{ vacancy.text }}</p>
+                  <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 75px 15px 75px;">             
+                  <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Snell Roundhand, cursive; font-size: 11px; text-align: center;">{{ vacancy.date }}</p>
                   
                 </div>
               </div>
           </div>    
-            {% endfor %} 
-        <div class="myClass7"> 
-        	<div class="row">
-        		<div class="col-lg-12">
-        			<p style="text-align: center; font-family: Snell Roundhand, cursive; font-size: 15px;"> Місце відправлення розвозки</p>
-        		</div>
-        	</div>         
-            <div class="row">
-            	<div class="col-lg-12">
-                  <iframe src="https://www.google.com/maps/embed?pb=!4v1529589527497!6m8!1m7!1s2rhQkXutcFHw5gQ4HFzrrw!2m2!1d50.40095423821493!2d30.56223274158709!3f318.2508637855579!4f-11.089882037717217!5f0.7820865974627469" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                  
-                </div>
-            </div>
-        </div>    
+         
 
 
 

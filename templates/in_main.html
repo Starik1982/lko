@@ -61,31 +61,26 @@
 </div>
 
  <hr class="featurette-divider" style="border-color: #024e38">
+   <div class="row featurette" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background-color: #ffffff; background: linear-gradient(45deg,#ffffff, #fffbdf)">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 10px;" data-src="holder.js/500x500/auto" alt="500x500" src="{% static "images/4.jpg" %}">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">ТОВ "ЛКО ГРУП" <span class="text-muted">На ринку з 2005 року</span></h2>
+          <p style="color: #02845e; text-align: justify; margin: 15px 15px 15px 15px;" class="lead">З моменту заснування підприємство стало  офіційним дистриб'ютором ТМ "Оболонь" на території міста Києва та Київської області. Завдяки професіаналізму та надійності команди ми розширили свою діяльність. На даний час наша компанія є надійним партнером у сфері реалізації алкогольних напоїв і продуктів харчування більше ніж 30 торгівельних марок по всій території країни. </p>
+                
+        </div>
+    </div>
+
+ <hr class="featurette-divider" style=" border-color: #024e38">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row" style=" background-color: #fffff"> 
-        <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background: linear-gradient(45deg,#ffffff, #fffbdf);">      
-        {% for brand in brands %}
-        <div class="col-lg-4" style="padding-top: 20px">
-          <img class="img-circle" data-src="holder.js/240x240" alt="240x240" src="{{ brand.logo.url }}" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
-            <h2 style="font-family: Snell Roundhand, cursive; text-align: center">{{ brand.nam }}</h2>
-            <p>У рамках проекту оглядових екскурсій «Відкрита ОБОЛОНЬ» головну пивоварню корпорації у Києві відвідали понад 125 тис. вітчизняних та іноземних гостей завдяки організації 4,6 тис. екскурсій.</p>
-            <p><a class="btn btn-default" href="{% url 'brand' brand.id %}" role="button">Деталі »</a></p>
-        </div><!-- /.col-lg-4 -->
-        {%endfor%}
-        
-      </div><!-- /.col-lg-12 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider" style="border-color: #024e38">
+     
 
       <div class="row featurette" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background-color: #ffffff; background: linear-gradient(45deg,#ffffff, #fffbdf)">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Наш офіс <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Наш офіс.</h2>
+          <p style="color: #02845e; text-align: justify;" class="lead">Офісні приміщення оснащені новітньою технікою та всім необхідним приладдям для комфорту співробітників.  </p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 10px;" data-src="holder.js/500x500/auto" alt="500x500" src="{% static "images/5.jpg" %}">
@@ -99,8 +94,8 @@
           <img class="featurette-image img-responsive" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 10px;" data-src="holder.js/500x500/auto" alt="500x500" src="{% static "images/4.jpg" %}">
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Сучасні складські приміщення <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Сучасні складські приміщення.</h2>
+          <p style="color: #02845e; text-align: justify;" class="lead">Підприємство володіє складськими приміщеннями загальною площею понад 14000 квадратних метрів. Для збереження якості продукції створені всі умови включаючи підтримку температурного режиму.</p>
         </div>
       </div>
 
@@ -108,8 +103,8 @@
 
       <div class="row featurette" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background-color: #ffffff; background: linear-gradient(45deg,#ffffff, #fffbdf);">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Автопарк <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Транспорт. </h2>
+          <p style="color: #02845e" class="lead"> Автопарк компанії налічує більше 200 одиниць техніки, основну масу яких складають ватнажівки вантажопідйомністю від 3 тисяч тон. Технічне обслуговування силами власної станції технічного обслуговування.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 10px;" data-src="holder.js/500x500/auto" alt="500x500" src="{% static "images/6.jpg" %}">
@@ -117,7 +112,23 @@
       </div>
 
       <hr class="featurette-divider" style="border-color: #024e38">
-      
+
+       <div class="row" style=" background-color: #fffff"> 
+        <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background: linear-gradient(45deg,#ffffff, #fffbdf);">
+        <p style="color: #02845e; margin: 15px 0px 15px 0px; text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Нам довіряють свою продукцію найкращі бренди! </p>      
+        {% for brand in brands %}
+        <div class="col-lg-4" style="padding-top: 20px">
+          <img class="img-circle" data-src="holder.js/240x240" alt="240x240" src="{{ brand.logo.url }}" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
+            <h2 style="color: #02845e; font-family: Snell Roundhand, cursive; text-align: center">{{ brand.nam }}</h2>
+            <p style="color: #02845e">У рамках проекту оглядових екскурсій «Відкрита ОБОЛОНЬ» головну пивоварню корпорації у Києві відвідали понад 125 тис. вітчизняних та іноземних гостей завдяки організації 4,6 тис. екскурсій.</p>
+            <p><a class="btn btn-default" href="{% url 'brand' brand.id %}" role="button">Деталі »</a></p>
+        </div>
+        {%endfor%}
+        
+      </div>
+      </div>      
+
+      <hr class="featurette-divider" style="border-color: #024e38">      
       
       <div class="row featurette" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background-color: #ffffff; background: linear-gradient(45deg,#ffffff, #fffbdf);">
         
@@ -126,7 +137,7 @@
         </div>
         <div class="col-md-5">
           <h2 class="featurette-heading">Ми тут!</h2>
-          <p class="lead">Дана карта допоможе вам знайти дорогу до нас.</p>
+          <p class="lead">Карта допоможе знайти дорогу до нас.</p>
         </div>
       </div>
 
