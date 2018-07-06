@@ -118,7 +118,7 @@
         <p style="color: #02845e; margin: 15px 0px 15px 0px; text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Нам довіряють свою продукцію найкращі бренди! </p>      
         {% for brand in brands %}
         <div class="col-lg-4" style="padding-top: 20px">
-          <img class="img-circle" data-src="holder.js/240x240" alt="240x240" src="{{ brand.logo.url }}" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
+          <img  src="{{ brand.logo.url }}" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
             <h2 style="color: #02845e; font-family: Snell Roundhand, cursive; text-align: center">{{ brand.nam }}</h2>
             <p style="color: #02845e">У рамках проекту оглядових екскурсій «Відкрита ОБОЛОНЬ» головну пивоварню корпорації у Києві відвідали понад 125 тис. вітчизняних та іноземних гостей завдяки організації 4,6 тис. екскурсій.</p>
             <p><a class="btn btn-default" href="{% url 'brand' brand.id %}" role="button">Деталі »</a></p>
