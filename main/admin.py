@@ -80,13 +80,13 @@ class VacancyBerezanAdmin (admin.ModelAdmin):
         model = VacancyBerezan
 admin.site.register(VacancyBerezan, VacancyBerezanAdmin)
 
-class LogotipAdmin(admin.TabularInline):
-    model = Logotip
+class ProductAdmin(admin.TabularInline):
+    model = Product
     extra = 0
 
-class LogotipAdmin (admin.ModelAdmin):
-    list_display = [field.name for field  in Logotip._meta.fields]
+class ProductAdmin (admin.ModelAdmin):
+    list_display = [field.name for field  in Product._meta.fields]
 
     class Meta:
-        model = Logotip
-admin.site.register(Logotip, LogotipAdmin)
+        model = Product
+admin.site.register(Product, ProductAdmin)
