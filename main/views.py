@@ -8,9 +8,13 @@ def main(request):
 	args['brands'] = TradingTeams.objects.all
 	return render_to_response('in_main.html', args)
 
-def brand(request, brand_id = 1):
+def brand(request, brand_id = 1):	
 	args = {}
 	args['brand'] = TradingTeams.objects.get(id = brand_id)
+	tag = args['brand'].nam
+	args['products'] = Product.objects.filter(tag = tag)
+	args['product'] = Product.objects.get(id = 1)
+	
 	return render_to_response('brand.html', args)
 
 def brands(request):

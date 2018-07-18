@@ -11,38 +11,44 @@
       <div class="row"> 
         <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; padding-top: 20px;   background: linear-gradient(45deg,#ffffff, #fffbdf);;
     background-size: 100% 100%;  ">
-          <div class="row">
-           <div class="col-lg-12" style="padding-top: 20px">
-            
-
-              <p style="text-align: center; font-family: 'RobotoLight',sans-serif;  font-size: 55px; color: #000;">{{ brand.nam }}</p>
-                         
-            </div>  
-          </div>
-        <div class="row">         
+         <div class="row">         
           <div class="myClass71">
-              <p style="margin: 0px 15px 0px 15px; font-family: 'RobotoLight',sans-serif; font-size: 18px; text-align: justify; color: #000;
+            <p style="text-align: center; font-family: 'RobotoLight',sans-serif;  font-size: 55px; color: #000;">{{ brand.nam }}</p>
+            <p style="margin: 0px 15px 0px 15px; font-family: 'RobotoLight',sans-serif; font-size: 18px; text-align: justify; color: #000;
               ">{{ brand.trademark }}</p>
 
     <div class="myCarousel1">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="justify-content: center; color:black; width: 50%; height: 400px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="justify-content: center; color:black; width: 50%; height: 100%;">
       <!-- Indicators -->
       
-      <div class="carousel-inner" style="width: 110px; height: 400px;">
-        <div class="item active" style="width: 110px; height: 400px; background-color: #fff">
-          <img style="width: 110px; height: 400px;" alt="First slide" src="{% static "images/a1.png" %}">
-          
+      <div class="carousel-inner" style="width: 100%; height: 100%;">
+         {% for product in products %}
+         {% if forloop.first %}
+        <div class="item active" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0);">
+          <div class="mycarousel-caption" style="color: black">
+           
+              <h1>{{ product.name }}</h1>
+              <p>{{ product.description }}</p>
+             
+            </div>
+          <img style="width: 110px; height: 400px;" alt="First slide" src="{{ product.image.url }}">
         </div>
-        <div class="item" style="width: 110px; height: 400px;">
-          <img style="width: 110px; height: 400px;" alt="Second slide" src="{% static "images/a2.png" %}">
-          
-        </div>
-        <div class="item" style="width: 110px; height: 400px;">
-          <img style="width: 110px; height: 400px;" alt="Third slide" src="{% static "images/a3.png" %}">
-          
-        </div>
-      </div>
+        
+        {% else %}
 
+        <div class="item" style="width: 100%; height: 100%;">
+          <div class="mycarousel-caption" style="color: black">
+              <h2>{{ product.name }}</h2>
+              <p>{{ product.description }}</p>
+            </div>
+          <img style="width: 110px; height: 400px;" alt="Second slide" src="{{ product.image.url }}">
+          
+        </div>
+          {% endif %}
+          {%endfor%}
+        
+      </div>
+      <a class="left mycarousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" ></span></a>
       <a class="right mycarousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
    
       </div><!-- /.carousel -->
@@ -55,10 +61,7 @@
 
 
 
-
-
-
-
+     
 
 
 

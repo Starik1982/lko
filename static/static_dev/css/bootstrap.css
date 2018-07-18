@@ -6773,7 +6773,7 @@ button.close {
 
 }
 .myCarousel1{
-  height: 400px;
+  
   width: 100%;
   margin: 75px 15px 20px 150px;
 }
@@ -6941,14 +6941,14 @@ button.close {
 .mycarousel-control .glyphicon-chevron-right {
   position: absolute;
   top: 50%;
-  left: -350%;
-  margin-top: -10px;
+  left: 300%;
+  margin-top: -10px;5
   z-index: 5;
   display: inline-block;
 }
 .mycarousel-control .icon-prev,
 .mycarousel-control .glyphicon-chevron-left {
-  left: 50%;
+  left: -90%;
   margin-left: -10px;
 }
 .mycarousel-control .icon-next,
@@ -6988,3 +6988,47 @@ button.close {
   .mycarousel-control .icon-next {
     margin-right: -10px;
   }
+
+
+  .mycarousel-caption {
+  position: absolute;
+  margin-left: 40%;
+  margin-bottom: 20%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.mycarousel-caption .btn {
+  text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .mycarousel-control .glyphicon-chevron-left,
+  .mycarousel-control .glyphicon-chevron-right,
+  .mycarousel-control .icon-prev,
+  .mycarousel-control .icon-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+  }
+  .mycarousel-control .glyphicon-chevron-left,
+  .mycarousel-control .icon-prev {
+    margin-left: -10px;
+  }
+  .mycarousel-control .glyphicon-chevron-right,
+  .mycarousel-control .icon-next {
+    margin-right: -10px;
+  }
+  .mycarousel-caption {
+    left: 0;
+    right: 0;
+    padding-bottom: auto;
+  }
+  .mycarousel-indicators {
+    bottom: 20px;
+  }
+}
