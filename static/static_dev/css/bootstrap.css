@@ -6773,9 +6773,7 @@ button.close {
 
 }
 .myCarousel1{
-  
-  width: 100%;
-  margin: 75px 15px 20px 150px;
+  margin-top: 5px;   
 }
 
 
@@ -6837,7 +6835,7 @@ button.close {
 }
 
 .myClass71{
-  color: #fff;
+  color: #033b3e;
   margin: 10px 50px 10px 50px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, .6); 
   text-align: left;
@@ -6845,6 +6843,7 @@ button.close {
   padding: 10px 10px 10px 10px;
   
 }
+
 
 .myClass8{
   position: absolute;
@@ -6872,6 +6871,11 @@ button.close {
   margin-bottom: 20px;
 }
 
+.section1{
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
 .ing{
   max-width: 100%;
 }
@@ -6883,6 +6887,16 @@ button.close {
   flex-wrap: wrap;
   transition: 1s;
   transform: rotateX(5deg) rotateZ(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.container2{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 1s;
+  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);
   transform-style: preserve-3d;
 }
 
@@ -6903,7 +6917,7 @@ button.close {
 }
 
 .mycarousel-control.right {
-  left: auto;
+  left: 0;
   right: 0;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
@@ -6940,26 +6954,26 @@ button.close {
 .mycarousel-control .glyphicon-chevron-left,
 .mycarousel-control .glyphicon-chevron-right {
   position: absolute;
-  top: 50%;
-  left: 300%;
-  margin-top: -10px;5
+  top: 0%;
+  left: 0%;
+  margin-top: -10px;
   z-index: 5;
   display: inline-block;
 }
 .mycarousel-control .icon-prev,
 .mycarousel-control .glyphicon-chevron-left {
-  left: -90%;
-  margin-left: -10px;
+  left: 0;
+  margin-left: 0;
 }
 .mycarousel-control .icon-next,
 .mycarousel-control .glyphicon-chevron-right {
-  right: 50%;
-  margin-right: -10px;
+  right:0;
+  margin-right: 0;
 }
 .mycarousel-control .icon-prev,
 .mycarousel-control .icon-next {
-  width: 20px;
-  height: 20px;
+  width: 0;
+  height: 0;
   line-height: 1;
   font-family: serif;
 }
@@ -6993,12 +7007,13 @@ button.close {
   .mycarousel-caption {
   position: absolute;
   margin-left: 40%;
-  margin-bottom: 20%;
+  margin-bottom: 5%;
+  margin-right: 15%;
   bottom: 20px;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #ffffff;
+  color: #142b22;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }

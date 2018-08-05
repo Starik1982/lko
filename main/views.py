@@ -13,7 +13,7 @@ def brand(request, brand_id = 1):
 	args['brand'] = TradingTeams.objects.get(id = brand_id)
 	tag = args['brand'].nam
 	args['products'] = Product.objects.filter(tag = tag)
-	args['product'] = Product.objects.get(id = 1)
+	
 	
 	return render_to_response('brand.html', args)
 

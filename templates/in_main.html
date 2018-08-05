@@ -113,38 +113,54 @@
 
       <hr class="featurette-divider" style="border-color: #024e38">
 
-       <div class="row" style=" background-color: #fffff"> 
-        <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background: linear-gradient(45deg,#ffffff, #fffbdf);">
-        <p style="color: #02845e; margin: 15px 0px 15px 0px; text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Нам довіряють свою продукцію найкращі бренди! </p>      
-        {% for brand in brands %}
-        <div class="col-lg-4" style="padding-top: 20px">
-          <img  src="{{ brand.logo.url }}" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
-            <h2 style="color: #02845e; font-family: Snell Roundhand, cursive; text-align: center">{{ brand.nam }}</h2>
-            <p style="color: #02845e">У рамках проекту оглядових екскурсій «Відкрита ОБОЛОНЬ» головну пивоварню корпорації у Києві відвідали понад 125 тис. вітчизняних та іноземних гостей завдяки організації 4,6 тис. екскурсій.</p>
-            <p><a class="btn btn-default" href="{% url 'brand' brand.id %}" role="button">Деталі »</a></p>
+       <div class="row" style=" background-color: #fffff">  
+       <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; padding-top: 20px; background: linear-gradient(45deg,#ffffff, #fffbdf); margin: 1px 1px 5px 1px;">    
+       <p style="color: #02845e;  text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Нам довіряють свою продукцію найкращі бренди! </p>
+       <div class="section">       
+          <div class="container2" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background: linear-gradient(45deg,#ffffff, #fffbdf);">      
+          {% for brand in brands %}
+          <div class="card" style="padding: 20px">
+            <a href="{% url 'brand' brand.id %}"><img src="{{ brand.logo.url }}" style="border-radius: 5px 5px 5px 5px; width:270px; height: 270px; display: block; margin: 0 auto; "></a>              
+              
+          </div><!-- /.col-lg-4 -->
+          {%endfor%}
         </div>
-        {%endfor%}
-        
-      </div>
-      </div>      
+       
+    </div>
+      </div>  
+      </div>    
 
-      <hr class="featurette-divider" style="border-color: #024e38">      
-      
-      <div class="row featurette" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background-color: #ffffff; background: linear-gradient(45deg,#ffffff, #fffbdf);">
-        
-        <div class="col-md-7">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12101.399501274043!2d30.564413038810393!3d50.38508921221709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c60a18c96629%3A0x39c62430a7385163!2z0JvQutC-!5e0!3m2!1sru!2sua!4v1529586435126"  width="100%" height="400" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 10px;" allowfullscreen></iframe>         
-        </div>
-        <div class="col-md-5">
-          <h2 class="featurette-heading">Ми тут!</h2>
-          <p class="lead">Карта допоможе знайти дорогу до нас.</p>
-        </div>
-      </div>
+<hr class="featurette-divider" style="border-color: #024e38">
 
-      <hr class="featurette-divider" style="border-color: #024e38">
+<div class="row" style=" background-color: #fffff">  
+  <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background: linear-gradient(45deg,#ffffff, #fffbdf); margin: 1px 1px 5px 1px; "> 
+  <p style="margin-top: 25px; color: #02845e;  text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;"> Основними покупцями підприємства є:</p>   
+         
+  <div class="card" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
 
-      <!-- /END THE FEATURETTES -->
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 3px 5px 15px 5px;" src="{% static "images/ashan1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 3px 5px 15px 5px;" src="{% static "images/atb1.jpg" %}">  
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 3px 5px 15px 5px;" src="{% static "images/eko1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 1px 5px 15px 5px;" src="{% static "images/fora1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 1px 5px 15px 5px;" src="{% static "images/furshet1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 1px 5px 15px 5px;" src="{% static "images/megamarket1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 1px 5px 15px 5px;" src="{% static "images/novus1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 1px 5px 15px 5px;" src="{% static "images/silpo1.jpg" %}">
+  <img  style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 1px 5px 15px 5px;" src="{% static "images/vk1.jpg" %}">     
+  </div>
+</div>
+ </div>
+<hr class="featurette-divider" style="border-color: #024e38">      
+  <div class="row featurette" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background-color: #ffffff; background: linear-gradient(45deg,#ffffff, #fffbdf);">
+  <div class="col-md-7">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12101.399501274043!2d30.564413038810393!3d50.38508921221709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c60a18c96629%3A0x39c62430a7385163!2z0JvQutC-!5e0!3m2!1sru!2sua!4v1529586435126"  width="100%" height="400" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; margin: 10px;" allowfullscreen></iframe>         
+  </div>
+  <div class="col-md-5">
+    <h2 class="featurette-heading">Ми тут!</h2>
+      <p class="lead">Карта допоможе знайти дорогу до нас.</p>
+  </div>
+  </div>
 
 
-      <!-- FOOTER -->
-      {% endblock %}
+
+{% endblock %}

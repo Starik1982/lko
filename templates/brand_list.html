@@ -3,9 +3,9 @@
 
 
 {% block main %}
-<div class="container marketing" style="padding-top: 15px;">
+<div class="container marketing">
 	<div class="row" style=" background-color: #fffff"> 
-       <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; padding-top: 20px; background: linear-gradient(45deg,#ffffff, #fffbdf); margin: 150px 1px 5px 1px;">    
+       <div class="col-lg-12" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px;  background: linear-gradient(45deg,#ffffff, #fffbdf); margin: 1px 1px 5px 1px;">    
        <p style="color: #02845e;  text-align: center; font-size: 30px; font-family: Snell Roundhand, cursive;">Нам довіряють свою продукцію найкращі бренди! </p>
        <div class="section">       
           <div class="container1" style="box-shadow: 0 8px 15px rgba(0, 0, 0, .6); border-radius: 5px 5px 5px 5px; background: linear-gradient(45deg,#ffffff, #fffbdf);">      
@@ -14,9 +14,10 @@
             <a href="{% url 'brand' brand.id %}"><img src="{{ brand.logo.url }}" style="border-radius: 5px 5px 5px 5px; width:270px; height: 270px; display: block; margin: 0 auto;"></a>              
               
           </div><!-- /.col-lg-4 -->
-        {%endfor%}
+          {%endfor%}
        
     </div>
-      </div><!-- /.col-lg-12 -->
+  </div><!-- /.col-lg-12 -->
+</div>
        
 {% endblock %}
