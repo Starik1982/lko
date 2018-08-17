@@ -6264,7 +6264,152 @@ button.close {
 .carousel-inner > .item > a > img {
   line-height: 1;
 }
-@media all and (transform-3d), (-webkit-transform-3d) {
+@media all and (max-width: 800px) {
+ 
+  .dws-menu ul{
+    display: none;
+  }
+  .dws-menu label.toggleMenu{
+  background: #02845e;
+  display: block;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #024e38;
+}
+.dws-menu [type="checkbox"]{
+  display: none;
+}
+
+input.toggleMenu:checked + label.toggleMenu{
+  background: #000;
+  color: #fff;
+}
+input.toggleMenu:checked ~ ul{
+  display: block;
+}
+
+.dws-menu > ul li a{
+  display: block;
+  background: #02845e;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #024e38;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #024e38;
+   
+}
+.dws-menu ul,
+.dws-menu ol{
+  list-style: none;
+}
+
+.dws-menu *{
+  margin: 0;
+  padding: 0; 
+}
+
+.dws-menu  li a:hover{
+  background: black;
+  color: #ffffff; 
+  
+}
+
+.dws-menu label.toggleMenu .fas{
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+}
+
+.dws-menu > ul li > a i.fas{
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+    transition: all 0.3s ease;
+}
+
+
+.popup {
+    top: 25%;
+    left: 0;
+    right: 0;       
+    font-size: 14px;
+    margin: auto;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: absolute;
+    padding: 55px 55px;
+    border: 1px solid green;
+    background: #fefefe;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    transition: all 0.3s ease;
+}
+
+.popup > p{
+  margin: 42px;
+}
+
+
+.Absolute-Center 
+{
+
+text-align: center;
+}
+
+.butt{
+    color: #ffffff;
+    font: inherit;
+    margin: 0;
+    background: green;
+    border-color: #1eb90f;
+    width: 130px;
+    height: 45px;
+    border-radius: 4px;
+  }
+
+.butt:hover{
+  background:#ffffff;
+  color: green;
+  border-color: green;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+}
+
+
+
   .carousel-inner > .item {
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     -o-transition: -o-transform 0.6s ease-in-out;
@@ -6778,7 +6923,7 @@ button.close {
 
 
 .muClass1{
-   margin: 150px 1px 1px 1px;
+   margin: 75px 1px 1px 1px;
 }
 
 .myClass2{
@@ -7046,4 +7191,170 @@ button.close {
   .mycarousel-indicators {
     bottom: 20px;
   }
+}
+header{
+  margin-top: 45px;
+  font-family: Cuprum, Arial, Helvetical, sans-serif;
+}
+.dws-menu *{
+  margin: 0;
+  padding: 0; 
+}
+
+.dws-menu ul,
+.dws-menu ol{
+  list-style: none;
+}
+.dws-menu > ul{
+  display: flex;
+  justify-content: center;
+}
+.dws-menu > ul li a{
+  display: block;
+  background: #02845e;
+  padding: 20px 75px 20px 100px;
+  font-size: 34px;
+  color: #024e38;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 15px 8px 15px rgba(0, 0, 0, .6); 
+  border: 1px solid #024e38;
+}
+
+.dws-menu > ul li {
+  position: relative;
+
+  
+  
+}
+
+.dws-menu > ul li > a i.fas{
+  position: absolute;
+  top: 28%;
+  left: 15%;
+  font-size: 34px;
+}
+.dws-menu > ul li:first-child{
+  
+
+}
+.dws-menu > ul li:first-child a{
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: 0 10px -1px rgba(0, 0, 0, .6); 
+}
+
+.dws-menu > ul li:last-child{
+ 
+  
+}
+
+.dws-menu > ul li:last-child a{
+   border-radius: 0px 15px 15px 0px;
+}
+
+.dws-menu  li a:hover{
+  background: black;
+  color: #ffffff;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+}
+.dws-menu [type="checkbox"]{
+  display: none;
+}
+.dws-menu label.toggleMenu{
+  background: #02845e;
+  display: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dws-menu label.toggleMenu .fas{
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+    transition: all 0.3s ease;
+}
+
+
+.popup {
+    top: 25%;
+    left: 0;
+    right: 0;       
+    font-size: 14px;
+    margin: auto;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: absolute;
+    padding: 55px 55px;
+    border: 1px solid green;
+    background: #fefefe;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    transition: all 0.3s ease;
+}
+.popup > p{
+  margin: 42px;
+}
+
+
+.Absolute-Center 
+{
+
+text-align: center;
+}
+
+.butt{
+    color: #ffffff;
+    font: inherit;
+    margin: 0;
+    background: green;
+    border-color: #1eb90f;
+    width: 130px;
+    height: 45px;
+    border-radius: 4px;
+  }
+
+.butt:hover{
+  background:#ffffff;
+  color: green;
+  border-color: green;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+}
+
+.myClass7 > p  i.fas {
+  margin-top: 1px
 }

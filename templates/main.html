@@ -8,11 +8,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{% static "js/script.js" %}"></script>
+    
+ 
+    
 
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- Bootstrap-->
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
 
@@ -20,68 +26,45 @@
 
 </head>
 <body  style="background: linear-gradient(-45deg,#04130d, #02845e);" >
-  <nav class="navbar navbar-default"  role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header" >
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-      <a class="navbar-brand" href="/">ТОВ "ЛКО ГРУП"</a>
+  <header>
+    <nav class="dws-menu">
+      <input type="checkbox" name="toggle" id="menu1" class="toggleMenu">
+      <label for="menu1" class="toggleMenu"><i class="fas fa-bars"></i>Меню</label>
+      <ul>
+      <li><a href="/"><i class="fas fa-home"></i>Головна</a></li>
+      <li><a href="{% url 'brands' %}"><i class="fas fa-shopping-cart"></i>Продукція</a></li>
+      <li><a href="{% url 'vacancy' %}"><i class="fas fa-briefcase"></i>Вакансії</a></li>
+      <li><a href="{% url 'contacts' %}"><i class="fas fa-mobile-alt"></i>Контакти</a></li>
+    </ul>
+    </nav>
+  </header>
+{% block main %}
+{% endblock %}
+
+
+
+<!-- Modal -->
+<!-- Модальное Окно  -->
+<div id="overlay">
+    <div class="popup">
+        <p style="margin-top: 5px; text-align: center; color: green; font-size: 25px; font-family: Bitter,Helvetica,Arial,sans-serif;"> УВАГА! </p>
+        <p style="text-align: center; color: green; font-size: 85px"> 18+ </p>
+        <p style="text-align: center; color: green; font-size: 25px">Вам виконалось 18 років?</p> 
+
+        <div class = "Absolute-Center">
+          <button class="butt" onclick="document.getElementById('overlay').style.display='none';">Так</button>
+        </div>        
+          
+       
     </div>
+</div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="{% url 'brands' %}">Торгівельні команди</a></li>
-        <li><a href="{% url 'vacancy' %}">Вакансії підприємства</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Действие</a></li>
-            <li><a href="#">Другое действие</a></li>
-            <li><a href="#">Что-то еще</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Отдельная ссылка</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Еще одна отдельная ссылка</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Отправить</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Ссылка</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Действие</a></li>
-            <li><a href="#">Другое действие</a></li>
-            <li><a href="#">Что-то еще</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Отдельная ссылка</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-  {% block main %}
+<!--============= MODAL WINDOW END==================================-->
 
 
-
-  {% endblock %}
       <footer>       
        
-        <p style="text-align: center;">© 2018 LKO Grup Company.</p>
+        <p style="margin-top: 25px; text-align: center; color: #ffffff">© 2005 - 2018 LKO Grup Company.</p>
       </footer>
 
     </div><!-- /.container -->
@@ -99,6 +82,27 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js'></script>
+
+<script type="text/javascript">    
+
+$(document).ready(function(){
+  // Проверяем запись в куках о посещении
+  // Если запись есть - ничего не происходит
+     if (!$.cookie('hideModal')) {
+  // если cookie не установлено появится окно
+  // с задержкой 5 секунд
+  var delay_popup = 2000;
+  setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+     }
+     $.cookie('hideModal', true, {
+   // Время хранения cookie в днях
+  expires: 1,
+  path: '/'
+   });
+});
+</script>
+
 
 
 </body>

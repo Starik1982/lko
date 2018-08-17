@@ -18,5 +18,7 @@ urlpatterns = [
     url(r'^vacancy_oblast/(?P<vacancy_id>\d+)/$', views.get_vacancy_oblast, name ='get_vacancy_oblast'),
     url(r'^vacancy_berezan/$', views.vacancy_berezan, name ='vacancy_berezan'),
     url(r'^vacancy_berezan/(?P<vacancy_id>\d+)/$', views.get_vacancy_berezan, name ='get_vacancy_berezan'),
+    url(r'^contacts/$', views.contacts, name ='contacts'),
+    url(r'^contacts/addmessage/$', views.addmessage, name ='addmessage'),
 
 ] 

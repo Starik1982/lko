@@ -90,3 +90,27 @@ class ProductAdmin (admin.ModelAdmin):
     class Meta:
         model = Product
 admin.site.register(Product, ProductAdmin)
+
+class MessageAdmin(admin.TabularInline):
+    model = Message
+    extra = 0
+
+class MessageAdmin (admin.ModelAdmin):
+    list_display = [field.name for field  in Message._meta.fields]
+
+    class Meta:
+        model = Message
+admin.site.register(Message, MessageAdmin)
+
+class CommentsAdmin(admin.TabularInline):
+    model = Comments
+    extra = 0
+
+class CommentsAdmin (admin.ModelAdmin):
+    list_display = [field.name for field  in Comments._meta.fields]
+
+    class Meta:
+        model = Comments
+admin.site.register(Comments, CommentsAdmin)
+
+

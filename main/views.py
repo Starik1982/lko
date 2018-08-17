@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from .models import *
 from django.shortcuts import render, render_to_response
 
+from django.template.context_processors import csrf
 
 def main(request):
 	args = {}
@@ -76,13 +78,25 @@ def get_vacancy_berezan(request, vacancy_id = 1):
 	args['vacancy'] = VacancyBerezan.objects.get(id = vacancy_id)
 	return render_to_response('vacancy.html', args)
 
+def contacts(request):
+	args = {}	
+	args.update(csrf(request))
+	args['messages'] = Message.objects.order_by('-date')[:10]
 
+	return render_to_response('contacts.html',  args)
 
+def addmessage(request):
+	comments_text = ''
+	args = {}
+	args.update(csrf(request))
+	args['messages'] = Message.objects.order_by('-date')[:10]
+	if request.method == 'POST':
+		visitor = request.POST.get('visitor')
+		text = request.POST.get('text')
+		p = Message(visitor=visitor, text=text)
+		p.save()
+	else:
+		return render_to_response('contacts.html',  args)
 
-
-
-
-
-
-
+	return render_to_response('contacts.html',  args)
 
