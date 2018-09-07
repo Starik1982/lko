@@ -7,22 +7,20 @@
     <title>ЛКО ГРУП</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="{% static "js/script.js" %}"></script>
-    
- 
+    <script src="{% static "js/script.js" %}"></script> 
+
+    <!-- recaptcha -->
     
 
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
-    
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-    <!-- Custom styles -->  
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">    
+    
 
 </head>
 <body  style="background: linear-gradient(-45deg,#04130d, #02845e);" >
@@ -101,6 +99,23 @@ $(document).ready(function(){
   path: '/'
    });
 });
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close1")[0];
+
+btn.onclick = function(){
+  modal.style.display = "block";
+}
+span.onclick = function(){
+  modal.style.display = "none";
+}
+window.onclick = function(event){
+  if (event.target == modal){
+    modal.style.display = "none";
+  }
+}
+
 </script>
 
 

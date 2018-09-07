@@ -43,16 +43,39 @@
                
           </div>
           <p style="margin-top: 35px; color: #02845e; text-align: center; font-size: 30px; font-family: Cuprum,  sans-serif;">Напишіть нам.</p>
-          <div class="myClass7">       
+          <wrapper>
+            <div id="myBtn" class="dws1">
+              <div id="myBtn" class="pulse1">
+              <div id="myBtn" class="block1"></div>
+              <div id="myBtn" class="phone1"><i class="far fa-envelope"></i></div>
+              <div id="myBtn" class="text1">Написати</div>
+              </div>
+            </div>
+            </wrapper>
+            
+            <div class="myClass7">       
             
             <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;"> 
             {% for message in messages %}        
             <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Cuprum, sans-serif; font-size: 22px; text-align: center; text-align: center;"> {{ message.visitor}}</p>
             <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Cuprum, sans-serif; font-size: 16px; text-align: center; text-align: center;"> {{ message.text}}</p>
             <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Cuprum, sans-serif; font-size: 12px; text-align: center; text-align: center;"> {{ message.date}}</p>
-            <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
             
-            {% endfor %}
+
+          {% for test in message.comments_set.all %}
+          <p style="color: red; margin: 25px 15px 0px 15px; font-family: Cuprum, sans-serif; font-size: 12px; text-align: center; text-align: center;">Адміністрація:</p>
+          <p style="color: red; margin: 0px 15px 0px 15px; font-family: Cuprum, sans-serif; font-size: 12px; text-align: center; text-align: center;"> {{test.comments_text}}</p>          
+          {% endfor %} 
+          <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">              
+          {% endfor %}
+          
+
+
+
+          <div id="myModal" class="myModal">
+            <div class="modal-content-1">
+              <span class="close1"><a style=" color: #02845e;  text-decoration: none;" href="">&times;</a></span>
+
 
            <form role="form" action="/contacts/addmessage/" method="post">
               {% csrf_token %}
@@ -64,10 +87,15 @@
               <label style="color: #02845e;" for="textarea">Повідомлення:</label>
               <textarea type="text"class="form-control" id="text" name="text" rows="3" placeholder="Текст повідомлення"></textarea>
             </div>
-            <div>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="6LdGrGsUAAAAACTWgEKfiIiwaKSXF7rjdOg8Ya0d"></div>
+            <div style="margin-top: 15px">
               <button type="submit" class="btn btn-default active">Відправити</button>
             </div>
+            
           </form>
+        </div>
+        </div>
 
 
                
