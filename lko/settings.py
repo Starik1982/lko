@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,20 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,  "static", "media")
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LdGrGsUAAAAAJrp-7VeNM7zP7F6GDJOAsYwDUhw'
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+'default': {
+'toolbar': 'None',
+},
+}
+
+CKEDITOR_JQUERY_URL = os.path.join(STATIC_URL, 'js/jquery.min.js')
+
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+
+try:
+   from .settings_prod import *
+except:
+    pass

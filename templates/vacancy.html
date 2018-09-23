@@ -24,7 +24,7 @@
                 <div class="col-lg-12">
                   <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Bitter,Helvetica,Arial,sans-serif; font-size: 23px; text-align: center;"> {{ vacancy.name_vacancy }}</p>
                    <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 375px 15px 375px;">
-                  <p style="text-align: justify; color: #02845e; margin: 0px 15px 0px 15px; font-family: Bitter,Helvetica,Arial,sans-serif; font-size: 17px;">{{ vacancy.text }}</p>
+                  <p style="text-align: justify; color: #02845e; margin: 0px 15px 0px 15px; font-family: Bitter,Helvetica,Arial,sans-serif; font-size: 17px;">{% autoescape off%}{{ vacancy.text }}{% endautoescape %}</p>
                   <hr class="featurette-divider" style="border-color: #02845e; margin: 15px 75px 15px 75px;">             
                   <p style="color: #02845e; margin: 0px 15px 0px 15px; font-family: Bitter,Helvetica,Arial,sans-serif; font-size: 11px; text-align: center;">{{ vacancy.date }}</p>
                   
