@@ -144,7 +144,6 @@ CKEDITOR_JQUERY_URL = os.path.join(STATIC_URL, 'js/jquery.min.js')
 
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
-
 try:
    from .settings_prod import *
 except:
